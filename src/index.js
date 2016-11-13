@@ -22,12 +22,13 @@ injectTapEventPlugin();
 // );
 
 
-//routing of URL's
+//routing of URL's (+ nested routing... views in views)
 render((
   <Router history={hashHistory}>
-    <Route path="/" component={MyIndex}/>
-    <Route path="/buttons" component={MyText}/>
-    <Route path="/buttons2" component={MyText2}/>
+    <Route path="/" component={MyIndex}>
+	    <Route path="/page1" component={MyText}/>
+	    <Route path="/page2" component={MyText2}/>
+    </Route>
   </Router>
 ), document.querySelector('.main'));
 
