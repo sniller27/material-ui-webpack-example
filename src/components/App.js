@@ -10,7 +10,7 @@ export default class extends Component {
   render() {
     return (
       <div>
-        <h1>Hello React!</h1>
+        <h1>Hello Reactss!</h1>
       </div>
     );
   }
