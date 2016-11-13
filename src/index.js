@@ -2,22 +2,34 @@ import React from 'react';
 //plugin fix. Needed for onTouchTap. (temporary)
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { render } from 'react-dom';
+//routing
+import { Router, Route, hashHistory } from 'react-router'
 //for providing a theme
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyButtons from './components/component1.jsx';
+//files
+import MyIndex from './components/component1.jsx';
+import MyText from './components/App.js';
+import MyText2 from './components/App2.js';
 
 //plugin fix. Needed for onTouchTap. (temporary)
 injectTapEventPlugin();
 
 //theme object?
-const App = () => (
-  <MuiThemeProvider>
-    <MyButtons />
-  </MuiThemeProvider>
-);
+// const App = () => (
+//   <MuiThemeProvider>
+//     <MyButtons />
+//   </MuiThemeProvider>
+// );
 
 
-render( <App />, document.querySelector('.main'));
+//routing of URL's
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={MyIndex}/>
+    <Route path="/buttons" component={MyText}/>
+    <Route path="/buttons2" component={MyText2}/>
+  </Router>
+), document.querySelector('.main'));
 
 
 
