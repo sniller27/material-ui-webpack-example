@@ -54,14 +54,16 @@ class AppMenu extends React.Component {
               <h1>Header material</h1>
               <NavLink to="/page1">page 1</NavLink>
               <NavLink to="/page2">page 2</NavLink>
+              <NavLink to="/form">Material UI form</NavLink>
 
               <Drawer 
               open={this.state.open}
               docked={false}
               onRequestChange={(open) => this.setState({open})}
               >
-                <MenuItem>Menu Item</MenuItem>
-                <MenuItem>Menu Item 2</MenuItem>
+                 <NavLink to="/page1"><MenuItem>Page 1</MenuItem></NavLink>
+                <NavLink to="/page2"><MenuItem>Page 2</MenuItem></NavLink>
+                <NavLink to="/form"><MenuItem>Material UI form</MenuItem></NavLink>
               </Drawer>
               {/* activates nested view from index.js */}
               {this.props.children}

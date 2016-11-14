@@ -22,7 +22,7 @@ class AppMenu extends React.Component {
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
          <div>
             <h1>App component</h1>
-            <RaisedButton label="Default" />
+            <RaisedButton label="Click me" />
          </div>
         </MuiThemeProvider>
       );
