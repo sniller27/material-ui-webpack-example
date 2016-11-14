@@ -30,7 +30,7 @@ ReactDOM.render((
     <Route path="/" component={MyIndex}>
     	<IndexRoute component={MyText} />
 	    <Route path="/home" component={MyText}/>
-	    <Route path="/signup" component={App}/>
+	    <Route path="/login" component={App}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

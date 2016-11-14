@@ -54,7 +54,7 @@ class AppMenu extends React.Component {
               <h1>Header material</h1>
               <NavLink to="/home">Home</NavLink>
               <br />
-              <NavLink to="/signup">Sign Up</NavLink>
+              <NavLink to="/login">Login</NavLink>
 
 
               <Drawer 
@@ -63,7 +63,7 @@ class AppMenu extends React.Component {
               onRequestChange={(open) => this.setState({open})}
               >
                  <NavLink to="/home"><MenuItem>Home</MenuItem></NavLink>
-                <NavLink to="/signup"><MenuItem>Sign up</MenuItem></NavLink>
+                <NavLink to="/login"><MenuItem>Sign up</MenuItem></NavLink>
               </Drawer>
               {/* activates nested view from index.js */}
               {this.props.children}
