@@ -48,22 +48,22 @@ class AppMenu extends React.Component {
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
            <div>
               <AppBar 
-              title="My AppBar"
+              title="My App"
               onLeftIconButtonTouchTap={this.handleToggle}
                />
               <h1>Header material</h1>
-              <NavLink to="/page1">page 1</NavLink>
-              <NavLink to="/page2">page 2</NavLink>
-              <NavLink to="/form">Material UI form</NavLink>
+              <NavLink to="/home">Home</NavLink>
+              <br />
+              <NavLink to="/signup">Sign Up</NavLink>
+
 
               <Drawer 
               open={this.state.open}
               docked={false}
               onRequestChange={(open) => this.setState({open})}
               >
-                 <NavLink to="/page1"><MenuItem>Page 1</MenuItem></NavLink>
-                <NavLink to="/page2"><MenuItem>Page 2</MenuItem></NavLink>
-                <NavLink to="/form"><MenuItem>Material UI form</MenuItem></NavLink>
+                 <NavLink to="/home"><MenuItem>Home</MenuItem></NavLink>
+                <NavLink to="/signup"><MenuItem>Sign up</MenuItem></NavLink>
               </Drawer>
               {/* activates nested view from index.js */}
               {this.props.children}

@@ -1,37 +1,39 @@
 import React from 'react';
 //plugin fix. Needed for onTouchTap. (temporary)
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 //routing (IndexRoute for showing start view)
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 //for providing a theme
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //files
 import MyIndex from './components/component1.jsx';
 import MyText from './components/App.js';
-import MyText2 from './components/App2.js';
+import App from './components/App2.jsx';
+// import Other from './components/form.jsx';
 
 //plugin fix. Needed for onTouchTap. (temporary)
 injectTapEventPlugin();
 
-//theme object?
+//theme object? supporting arrow function syntax
 // const App = () => (
 //   <MuiThemeProvider>
 //     <MyButtons />
 //   </MuiThemeProvider>
 // );
+// ReactDOM.render(<App />, document.getElementById('app'));
 
 
 //routing of URL's (+ nested routing... views in views)
-render((
+ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={MyIndex}>
     	<IndexRoute component={MyText} />
-	    <Route path="/page1" component={MyText}/>
-	    <Route path="/page2" component={MyText2}/>
+	    <Route path="/home" component={MyText}/>
+	    <Route path="/signup" component={App}/>
     </Route>
   </Router>
-), document.querySelector('.main'));
+), document.getElementById('app'));
 
 
 
