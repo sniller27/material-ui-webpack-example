@@ -1,8 +1,10 @@
-#ReactJS Application
-The current goal of this project is to play with React, and use Material UI to build interesting Material Design.
-This build consists of a node server, webpack for bundling and reactjs framework.
+# ReactJS Application
+This project is an example of how to use Material-UI for Material Design in React.js. 
+The example was used for a presentation.
 
-##Installation
+The project consists of a node server, webpack for bundling, Material-UI and Reacts.js framework.
+
+## Installation
 1. Install from package.json
 
 ```sh
